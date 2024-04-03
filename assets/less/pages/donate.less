@@ -1,0 +1,234 @@
+main#wrapper {
+    article {
+        section.donate {
+            h2.section-title {
+                margin-block: 10px 40px;
+                #mixin-media-screen-app(min-1200, {
+                    @fs-3: 4.1rem;
+                    font-size: @fs-3;
+                });
+            }
+            ul.donate-list {
+                display: grid;
+                gap: 60px;
+                #mixin-media-screen-app(min-992, {
+                    grid-template-columns: 1fr 1fr;
+                    column-gap: 50px;
+                });
+                li div.donate-card {
+                    #mixin-media-screen-app(min-580, {
+                        position: relative;
+                        padding-block-end: 150px;
+                        box-shadow: none;
+                    });
+                    #mixin-media-screen-app(min-1200, {
+                        padding-inline-end: 120px;
+                    });
+                    figure.card-banner {
+                        background-color: @light-gray;
+                    }
+                    div.card-content {
+                        background-color: @white;
+                        padding: 35px;
+                        box-shadow: @card-shadow;
+                        transform: perspective(800px) rotateX(15deg);
+                        transition: all 0.3s linear;
+                        &:hover {
+                            transform: perspective(800px) rotateX(0deg);
+                        }
+                        #mixin-media-screen-app(min-580, {
+                            position: absolute;
+                            width: 75%;
+                            bottom: 0;
+                            right: 0;
+                            border-radius: 4px;
+                        });
+                        #mixin-media-screen-app(min-1200, {
+                            width: 65%; 
+                        });
+                        div.progress-wrapper {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+    
+                            p.progress-text {
+                                display: flex;
+                                gap: 5px;
+                                font-size: @fs-8;
+    
+                                data {
+                                    color: @eerie-black-2;
+                                    font-weight: @fw-600;
+                                }
+                            }
+    
+                            data.progress-value {
+                                color: @pistachio;
+                                font-size: @fs-7;
+                                font-weight: @fw-600;
+                            }
+                        }
+    
+                        div.progress-box {
+                            div.progress {
+                                height: 6px;
+                                width: 83%;
+                                background-color: @pistachio;
+                                border-radius: inherit;
+                            }
+                        }
+    
+                        div.progess-box {
+                            background-color: @cultured;
+                            border-radius: 20px;
+                            margin-block: 10px 20px;
+    
+                            div.progress {
+                                height: 6px;
+                                width: 83%;
+                                background-color: @pistachio;
+                                border-radius: inherit;
+                            }
+                        }
+    
+                        h3.card-title {
+                            @fs-5: 2.1rem;
+                            #mixin-media-screen-app(min-580, {
+                                @fs-5: 2.4rem; 
+                            });
+                        }
+    
+                        div.card-wrapper {
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: space-between;
+                            align-items: center;
+                            gap: 5px;
+                            margin-block: 15px;
+    
+                            p.card-wrapper-text {
+                                display: flex;
+                                gap: 5px;
+    
+                                span {
+                                    color: @sonic-silver;
+                                    font-weight: @fw-500;
+                                }
+    
+                                data {
+                                    font-weight: @fw-600;
+                                }
+                                data.green {
+                                    color: @pistachio;
+                                }
+                                data.yellow {
+                                    color: @bright-yellow-crayola;
+                                }
+    
+                                data.cyan { 
+                                    color: @medium-turquoise; 
+                                }
+                            }
+                        }
+    
+                        #styleHoverBtn()
+                    }
+                }
+            }
+        }
+    
+        section.testi {
+            background-color: @jet;
+    
+            #mixin-media-screen-app(min-992, {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            });
+            div.testi-content {
+                padding: @section-padding 15px;
+                #mixin-media-screen-app(min-992, {
+                    padding-inline: 30px 50px; 
+                });
+            }
+    
+            h2.section-title {
+                color: @white;
+                margin-block: 10px 40px;
+                #mixin-media-screen-app(min-1200, {
+                    @fs-3:4.4rem;
+                    font-size: @fs-3;
+                });
+            }
+    
+            div.testi-card {
+                color: @white; 
+                #mixin-media-screen-app(min-768, {
+                    display: flex;
+                    align-items: flex-start;
+                    gap: 30px;
+                });
+                figure {
+                    flex-shrink: 0;
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+    
+                blockquote.testi-text, h3.testi-name {
+                    font-size: @fs-8;
+                }
+                blockquote.testi-text, p.testi-title {
+                    font-family: @ff-inter; 
+                }
+                blockquote.testi-text {
+                    padding-block-end: 30px;
+                    border-block-end: 1px solid @white_10;
+                    margin-block: 20px 30px;
+                    #mixin-media-screen-app(min-768, {
+                        margin-block-start: 0;
+                    });
+                }
+                p.testi-title {
+                    color: @white_50;
+                    font-size: @fs-10;
+                }
+            }
+    
+            figure.testi-banner {
+                background-color: @light-gray; 
+            }
+        }
+    
+        section.partner {
+            background-color: @baby-powder;
+    
+            div.container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                gap: 50px;
+                
+                #mixin-media-screen-app(min-1200, {
+                    justify-content: space-evenly;
+                });
+
+                a.partner-logo .color,
+                a.partner-logo:is(:hover, :focus) .gray {
+                    display: none;
+                }
+    
+                .partner-logo:is(:hover, :focus) .color,
+                .partner-logo .gray { 
+                    display: block; 
+                }
+            }
+        }
+    }
+}

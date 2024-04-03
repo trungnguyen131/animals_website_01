@@ -1,0 +1,99 @@
+main#wrapper {
+    article {
+        section.hero {
+            background-color: @eerie-black-1;
+            color: @white;
+            min-height: 900px;
+            padding-block: 120px 60px;
+            display: grid;
+            align-items: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: left top;
+            #mixin-media-screen-app(min-992, {
+                min-height: 780px;
+            });
+            #mixin-media-screen-app(min-1200, {
+                padding-block: 200px 325px;
+                background-position: center;
+            });
+            p.section-subtitle {
+                color: @white;
+                font-size: @fs-7;
+                font-family: @ff-inter;
+            }
+    
+            h2.hero-title {
+                #mixin-media-screen-app(min-580, {
+                    @fs-2: 5.5rem;
+                    font-size: @fs-2;
+                });
+                #mixin-media-screen-app(min-992, {
+                    @fs-2: 7.5rem;
+                    font-size: @fs-2;
+                });
+                font-size: @fs-2;
+                margin-block: 30px;
+                line-height: 1.2;
+            }
+    
+            p.hero-text {
+                font-family: @ff-inter;
+                font-size: @fs-8;
+                letter-spacing: -1px;
+                max-width: 50ch;
+                margin-block-end: 30px;
+            }
+        }
+
+        section.features {
+            padding-block-start: 50px;
+            background-color: @eerie-black-1;
+            #mixin-media-screen-app(min-992, {
+                padding-block-start: @section-padding;
+            });
+            #mixin-media-screen-app(min-1200, {
+                margin-block-start: -185px;
+                margin-block-start: -160px;
+                background-color: transparent;
+                background-color: rgba(@eerie-black-1, 0.95);
+            });
+    
+            .features-list {
+                display: grid;
+                gap: 30px;
+                #mixin-media-screen-app(min-768, {
+                    grid-template-columns: 1fr 1fr;
+                });
+                #mixin-media-screen-app(min-992, {
+                    grid-template-columns: repeat(4, 1fr);
+                });
+                .features-item {
+                    display: flex;
+                    align-items: flex-start;
+                    gap: 25px;
+    
+                    .item-icon {
+                        color: @pistachio;
+                        font-size: 5.5rem;
+                        margin-block-start: 10px;
+    
+                        ion-icon {
+                            @ionicon-stroke-width: 25px;
+                        }
+                    }
+    
+                    .item-title {
+                        margin-block-end: 10px; 
+                    }
+    
+                    .item-text {
+                        max-width: 25ch;
+                        color: #dbdbdb;
+                        font-size: @fs-9;
+                    }
+                }
+            }
+        }
+    }
+}

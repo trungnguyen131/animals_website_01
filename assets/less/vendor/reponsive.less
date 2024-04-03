@@ -1,0 +1,41 @@
+
+/*-----------------------------------*\
+#MEDIA QUERIES
+\*-----------------------------------*/
+@screen-min-450: 449.8px;
+@screen-min-580: 579.8px;
+@screen-min-768: 767.8px;
+@screen-min-992: 991.8px;
+@screen-min-1200: 1199.8px;
+
+#mixin-media-screen-app(@mypass, @content) {
+    & when(@mypass = min-450) {
+        @media screen and (min-width: @screen-min-450) {
+            @content();
+        }
+    }
+
+    & when(@mypass = min-580) {
+        @media screen and (min-width: @screen-min-580) {
+            @content();
+        }
+    }
+
+    & when(@mypass = min-768) {
+        @media screen and (min-width: @screen-min-768) {
+            @content();
+        }
+    }
+
+    & when(@mypass = min-992) {
+        @media screen and (min-width: @screen-min-992) {
+            @content();
+        }
+    }
+
+    & when(@mypass = min-1200) {
+        @media screen and (min-width: @screen-min-1200) {
+            @content();
+        }
+    }    
+}

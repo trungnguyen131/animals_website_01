@@ -1,0 +1,92 @@
+.container {
+    max-width: 1400px;
+    width: 100%;
+    margin-inline: auto;
+    padding-inline: 30px;
+}
+
+.section-subtitle {
+	gap: 10px;
+  display: flex;
+  align-items: center;
+  font-weight: @fw-600;
+  font-size:@fs-8;
+	color: @pistachio;
+  font-family: @ff-roboto;
+}
+
+.h1,
+.h2 { font-weight: @fw-300; }
+
+.h2,
+.h3 { line-height: 1.6; }
+
+.h2 {
+  font-size:@fs-3;
+  color: @eerie-black-2;
+}
+
+.h3 {
+  font-size: @fs-5;
+  color:@eerie-black-2;
+}
+
+.h4 {
+  color: @white;
+  font-size: @fs-6;
+}
+
+.btn {
+  position: relative;
+  background-color: @pistachio;
+  color: @white;
+  font-weight:@fw-600;
+  padding: 12px 32px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: @transition-2;
+}
+
+.btn ion-icon {
+  @ionicon-stroke-width: 55px;
+  font-size: 1.8rem;
+}
+
+.btn:not(.btn-outline)::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid  @pistachio;
+  transform: translate(5px, 5px);
+  transition:@transition-2;
+}
+
+.btn:is(:hover, :focus)::after { transform: translate(0, 0); }
+
+.btn-secondary { @btn-bg: @black; }
+
+.btn-secondary:is(:hover, :focus) { @btn-bg: @pistachio; }
+
+.btn-outline {
+  border: 2px solid @white;
+  background-color: transparent;
+}
+
+.btn-white {
+  @btn-bg: @platinum;
+  color: @black;
+}
+
+.section { padding-block: @section-padding; }
+
+.w-100 { width: 100%; }
+
+.section-text { line-height: 2; }
+
+.img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+

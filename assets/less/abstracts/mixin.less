@@ -1,0 +1,23 @@
+#styleHoverBtn() {
+    button.btn {
+        background: @black;
+        &::after {
+            border: 1px solid @black;
+        }
+        &:hover {
+            background: @pistachio;
+        }
+        &:hover::after {
+            border: 1px solid @pistachio;
+        }
+    }
+}
+
+#styleHoverBtnWhite() {
+    button.btn {
+        background: @platinum;
+        &::after {
+            border: 1px solid @platinum;
+        }
+    }
+}

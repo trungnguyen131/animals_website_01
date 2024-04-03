@@ -1,0 +1,72 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: $margin;
+    box-sizing: border-box;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit /// kế thừa màu từ phần tử cha của tag a
+}
+
+:where(a, img, span, time, input, strong, button, ion-icon) {
+    display: block;
+}
+
+img {
+    height: auto;
+}
+
+ion-icon {
+    pointer-events: none;
+}
+
+:where(input, button) {
+    background: none;
+    border:$background;
+    font: inherit;
+}
+
+input {
+    width: 100%;
+}
+
+button {
+    cursor: pointer;
+}
+
+:focus-visible {
+    outline-offset: 4px;
+}
+
+::selection {
+    background-color: @white_10;
+}
+
+html {
+    font-family: @ff-roboto;
+    color: @granite-gray;
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: @white;
+    font-size: 1.6rem;
+    line-height: 1.8;
+    overflow-x: hidden;
+    height: 300vh;
+}
+
+::-webkit-scrollbar { width: 13px; }
+
+::-webkit-scrollbar-track { background-color: hsl(0, 0%, 95%); }
+
+::-webkit-scrollbar-thumb { background-color: @pistachio; }
+
+
+

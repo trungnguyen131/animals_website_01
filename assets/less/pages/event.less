@@ -1,0 +1,152 @@
+main#wrapper {
+
+    article {
+        section.event {
+            padding-block-end: 120px;
+    
+            p.section-subtitle { 
+                justify-content: center; 
+            }
+    
+            h2.section-title {
+                text-align: center;
+                margin-block: 15px 50px;
+                font-size: @fs-3 + 0.9;
+                #mixin-media-screen-app(min-1200, {
+                    line-height: 1.2; 
+                });
+            }
+            ul.event-list {
+                display: grid;
+                gap: 30px;
+                margin-block-end: 70px;
+    
+                li div.event-card {
+                    border: 1px solid @platinum;
+                    padding: 40px 30px;
+                    border-radius: 2px;
+                    outline: 3px solid transparent;
+                    transition: @transition-2;
+                    #mixin-media-screen-app(min-580, {
+                        display: flex;
+                        align-items: flex-start;
+                        gap: 30px;
+                    });
+                    &:is(:hover, :focus) {
+                        outline-color: @pistachio; 
+                    }
+    
+                    time.card-time {
+                        background-color: @pistachio;
+                        color: @white;
+                        font-weight: @fw-600;
+                        line-height: 1.3;
+                        max-width: max-content;
+                        padding: 10px 20px;
+                        border-radius: 8px;
+                        box-shadow: 0 10px 15px @pistachio_50;
+    
+                        span.month {
+                            font-size: 2.1rem;
+                        }
+    
+                        span.date {
+                            font-size: @fs-4;
+                        }
+                    }
+    
+                    div.wrapper {
+                        #mixin-media-screen-app(min-992, {
+                            display: flex;
+                            flex-grow: 1;
+                            justify-content: space-between;
+                            align-items: center;
+                        });
+                        p.card-subtitle {
+                            margin-block: 30px 5px;
+                            color: @pistachio;
+                            font-size: @fs-8;
+                            font-weight: @fw-600;
+                            letter-spacing: -1px;
+                            #mixin-media-screen-app(min-580, {
+                                margin-block-start: 0; 
+                            });
+                        }
+    
+                        h3.card-title {
+                            color: @eerie-black-2;
+                            letter-spacing: -1px;
+                            #mixin-media-screen-app(min-580, {
+                                line-height: 1.4;
+                                font-size: @fs-5;
+                            });
+                        }
+    
+                        p.card-text {
+                            font-family: @ff-inter;
+                            margin-block: 5px 30px;
+                            #mixin-media-screen-app(min-992, {
+                                margin-block-end: 0; 
+                            });
+                        }
+                            #styleHoverBtnWhite();
+                    }
+                }
+            }
+    
+            button.btn-secondary {
+                margin-inline: auto;
+            }
+            #styleHoverBtn();
+        }
+    
+        section.insta-post {
+            
+            ul.insta-post-list {
+                display: flex;
+                overflow-x: auto;
+                scroll-snap-type: inline mandatory;
+                &::-webkit-scrollbar { display: none; }
+                li.insta-post-item {
+                    min-width: 90%;
+                    scroll-snap-align: center;
+                    #mixin-media-screen-app(min-580, {
+                        min-width: 45%;
+                    });
+                    #mixin-media-screen-app(min-768, {
+                        min-width: 32%;
+                    });
+                    #mixin-media-screen-app(min-992, {
+                        min-width: 24%;
+                    });
+                    #mixin-media-screen-app(min-1200, {
+                        min-width: 20%;
+                    });
+                }
+                a.insta-post-link {
+                    position: relative;
+                    background-color: @eerie-black-1;
+                    overflow: hidden;
+                    &:is(:hover, :focus) > img {
+                        transform: scale(1.1);
+                        opacity: 0.5;
+                    }
+                    &:is(:hover, :focus) > ion-icon { opacity: 1; }
+                    > img {
+                        transition: @transition-2;
+                    }
+                    ion-icon {
+                        color: @white;
+                        font-size: 5rem;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        opacity: 0;
+                        transition: @transition-2;
+                    }
+                } 
+            }
+        }
+    }
+}

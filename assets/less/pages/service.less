@@ -1,0 +1,136 @@
+main#wrapper {
+    article {
+        section.service {
+            background-color: @baby-powder;
+            background-repeat: no-repeat;
+            background-position: center top;
+            margin-block-start: -200px;
+            padding-block-start: 200px;
+    
+            div.container {
+                position: relative;
+                h2.section-title {
+                    margin-block: 10px 40px;
+                    #mixin-media-screen-app(min-1200, {
+                        @fs-3: 4.1rem;
+                        font-size: @fs-3;
+                    });
+                }
+    
+                ul.service-list {
+                    ul.slick-dots {
+                        display: flex;
+                        justify-content: center;
+                        margin-top: 30px;
+                        li {
+                            margin: 0 8px;
+                            button {
+                                font-size: 0;
+                                width: 18px;
+                                height: 8.5px;
+                                background-color:#181717 ;
+                                transition: all 0.3s;
+                                border-radius: 2px;
+                                outline: none;
+                            }
+
+
+                            &.slick-active button {
+                                width: 23px;
+                                background-color: hsl(86, 45%, 54%);
+                            }
+                        } 
+                    }
+
+                    button.pull-customArrows {
+                        position: absolute;
+                        right: 20px;
+                        top:-90px;
+                        z-index: 1;
+                        width: 45px;
+                        color:#fff;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        height: $width;
+                        border-radius: 50%;
+                        transition: all 0.3s linear;
+                        ion-icon {
+                            font-size: 2rem;
+                        }
+                        &.pull-left {
+                            right: 80px;
+                            background-color: #181717;
+
+                            &:hover {
+                                background-color: hsl(86, 45%, 54%);
+                            }
+                        }
+                        &.pull-right {
+                            background-color: hsl(86, 45%, 54%);
+                            &:hover {
+                                background-color: #181717;
+                            }
+                        }
+                    }
+
+                    .slick-list {
+                        margin: 0 -10px !important;
+                        .slick-slide {
+                            margin: 0 10px;
+                        }
+                    }
+
+                    li div.service-card {
+                        background-color: @white;
+                        text-align: center;
+                        padding: 45px 40px;
+                        border-radius: 2px;
+                        box-shadow: @card-shadow;
+                        transition: @transition-2;
+                        
+                        border: 3px solid transparent;
+                        &:is(:hover, :focus-within) {
+                            border-color: @pistachio;
+                        }
+    
+                        div.card-icon {
+                            color: @pistachio;
+                            font-size: 7rem;
+                            max-width: max-content;
+                            margin-inline: auto;
+    
+                            ion-icon {
+                                @ionicon-stroke-width: 20px;
+                            }
+                        }
+    
+                        h3.card-title {
+                            letter-spacing: -1px;
+                            margin-block: 10px;
+                        }
+    
+                        p.card-text {
+                            font-family: @ff-inter; 
+                        }
+    
+                        a.btn-link {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 5px;
+                            color: @silver-chalice;
+                            font-size: @fs-8;
+                            font-weight: @fw-600;
+                            margin-block-start: 15px;
+    
+                            span {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
